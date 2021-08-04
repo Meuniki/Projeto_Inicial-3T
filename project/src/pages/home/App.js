@@ -1,7 +1,35 @@
-function App() {
-  return (
-    <h1>Ola mundo</h1>
-  );
-}
+import { Component } from "react";
 
-export default App;
+import SideBarMenu from "../../components/sitebarMenu/sideBarMenu";
+import Header from "../../components/header/header";
+import CardsHeader from "../../components/home/cardsHeader";
+import CardsMid from '../../components/home/cardsMid';
+import CardFooter from '../../components/home/cardFooter';
+import CardRight from '../../components/home/cardRight';
+
+import './App.css'
+
+export default class App extends Component {
+    render() {
+        return (
+            <div>
+                <div className="body-content">
+                    <SideBarMenu />
+                    <div className="page-content">
+                        <Header />
+                        <div className="body-page">
+                            <div className="body-left">
+                                <CardsHeader />
+                                <CardsMid />
+                                <CardFooter />
+                            </div>
+                            <div className="body-right">
+                                <CardRight />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
