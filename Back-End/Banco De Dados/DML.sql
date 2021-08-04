@@ -7,10 +7,10 @@ VALUES		('adm@adm.com','adm123', 'Administrador')
 GO
 
 INSERT INTO Equipamentos(marca, tipoEquipamento, numSerie, descricao, numPatrimonio, ativo)
-VALUES		('Acer','Computador', '91847297510', 'Computador Gamer', '1', '1')
-		   ,('Dell','Computador', '83201853868', 'Computador Rápido', '2', '1')
-		   ,('Lenovo','Computador', '10482953217', 'Computador Potente', '3', '1')
-		   ,('Toshiba','Computador', '73027513846', 'Computador Custo-Benefício', '4', '0');
+VALUES		('Acer','Computador', '9184729751', 'Computador Gamer', '1', '1')
+		   ,('Dell','Computador', '8320185386', 'Computador Rápido', '2', '1')
+		   ,('Lenovo','Computador', '1048295321', 'Computador Potente', '3', '1')
+		   ,('Toshiba','Computador', '7302751384', 'Computador Custo-Benefício', '4', '0');
 GO
 
 INSERT INTO Salas(andar, nome, metragemSala)

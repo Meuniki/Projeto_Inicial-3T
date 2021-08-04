@@ -18,8 +18,8 @@ CREATE TABLE Equipamentos
 	idEquipamento		INT PRIMARY KEY IDENTITY
 	,marca				VARCHAR(150) NOT NULL
 	,tipoEquipamento	VARCHAR(150) NOT NULL
-	,numSerie			BIGINT NOT NULL
-	,descricao			VARCHAR(150) NOT NULL
+	,numSerie			CHAR(10) NOT NULL
+	,descricao			TEXT NOT NULL
 	,numPatrimonio		INT UNIQUE NOT NULL
 	,ativo				BIT NOT NULL
 );
@@ -40,6 +40,6 @@ CREATE TABLE Entradas
 	,idSala				INT FOREIGN KEY REFERENCES Salas(idSala)
 	,idEquipamento		INT FOREIGN KEY REFERENCES Equipamentos(idEquipamento)
 	,dataEntrada		DATETIME NOT NULL
-	,dataSaida			DATETIME NOT NULL
+	,dataSaida			DATETIME
 );
 GO
