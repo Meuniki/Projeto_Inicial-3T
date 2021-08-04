@@ -27,10 +27,13 @@ GO
 
 CREATE TABLE Salas
 (
-	idSala			INT PRIMARY KEY IDENTITY
-	,andar			INT NOT NULL
-	,nome			VARCHAR(150) UNIQUE NOT NULL
-	,metragemSala	FLOAT NOT NULL
+	idSala				INT PRIMARY KEY IDENTITY
+	,instituicao		VARCHAR(150) NOT NULL
+	,andar				INT NOT NULL
+	,nome				VARCHAR(150) UNIQUE NOT NULL
+	,metragemSala		FLOAT NOT NULL
+	,cep				INT NOT NULL
+	,telefone			INT NOT NULL
 );
 GO
 

@@ -13,13 +13,13 @@ VALUES		('Acer','Computador', '9184729751', 'Computador Gamer', '1', '1')
 		   ,('Toshiba','Computador', '7302751384', 'Computador Custo-Benefício', '4', '0');
 GO
 
-INSERT INTO Salas(andar, nome, metragemSala)
-VALUES			 ('1', 'Sala 1', '22.39')
-				,('1', 'Sala 2', '10.09')
-				,('2', 'Sala 3', '22.39')
-				,('2', 'Sala 4', '10.09')
-				,('3', 'Sala 5', '22.39')
-				,('3', 'Sala 6', '10.09');
+INSERT INTO Salas(instituicao, andar, nome, metragemSala, cep, telefone)
+VALUES			 ('Jéssica e Antonio Entregas Expressas ME', '1', 'Sala 1', '22.39', '05790440', '1125783163')
+				,('Jéssica e Antonio Entregas Expressas ME', '1', 'Sala 2', '10.09', '05790440', '1125783163')
+				,('Jéssica e Antonio Entregas Expressas ME', '2', 'Sala 3', '22.39', '05790440', '1125783163')
+				,('Jéssica e Antonio Entregas Expressas ME', '2', 'Sala 4', '10.09', '05790440', '1125783163')
+				,('Jéssica e Antonio Entregas Expressas ME', '3', 'Sala 5', '22.39', '05790440', '1125783163')
+				,('Jéssica e Antonio Entregas Expressas ME', '3', 'Sala 6', '10.09', '05790440', '1125783163');
 GO
 
 INSERT INTO Entradas(idSala, idEquipamento, dataEntrada, dataSaida)
