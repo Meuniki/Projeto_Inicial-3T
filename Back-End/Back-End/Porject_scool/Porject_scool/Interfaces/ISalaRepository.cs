@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Porject_scool.Interfaces
 {
     /// <summary>
-    /// Interface responsavel pelo repositorio SalaRepository
+    /// Interface responsável pelo repositório SalaRepository
     /// </summary>
     interface ISalaRepository
     {
@@ -34,8 +34,8 @@ namespace Porject_scool.Interfaces
         /// Atualiza um objeto sala existente atravez do seu ID
         /// </summary>
         /// <param name="id">ID da sala que será atualizada</param>
-        /// <param name="salaAtializada">Objeto com as informações</param>
-        void Atualizar(int id, Sala salaAtializada);
+        /// <param name="salaAtualizada">Objeto com as informações</param>
+        void Atualizar(int id, Sala salaAtualizada);
 
         /// <summary>
         /// Deleta uma sala através do seu ID

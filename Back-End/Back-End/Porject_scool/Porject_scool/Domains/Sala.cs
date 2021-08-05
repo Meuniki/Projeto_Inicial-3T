@@ -13,9 +13,12 @@ namespace Porject_scool.Domains
         }
 
         public int IdSala { get; set; }
+        public string Instituicao { get; set; }
         public int Andar { get; set; }
         public string Nome { get; set; }
         public double MetragemSala { get; set; }
+        public int Cep { get; set; }
+        public int Telefone { get; set; }
 
         public virtual ICollection<Entrada> Entrada { get; set; }
     }

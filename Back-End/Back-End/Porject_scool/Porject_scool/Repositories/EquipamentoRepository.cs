@@ -1,4 +1,5 @@
-﻿using Porject_scool.Domains;
+﻿using Porject_scool.Contexts;
+using Porject_scool.Domains;
 using Porject_scool.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +10,69 @@ namespace Porject_scool.Repositories
 {
     public class EquipamentoRepository : IEquipamentoRepository
     {
-        public void Atualizar(int id, Equipamento equipamentoAtializada)
+        ProjInicialContext ctx = new ProjInicialContext();
+
+        public void Atualizar(int id, Equipamento equipamentoAtualizado)
         {
-            throw new NotImplementedException();
+            Equipamento equipamentoBuscado = BuscarPorId(id);
+
+            if (equipamentoAtualizado.Marca != null)
+            {
+                equipamentoBuscado.Marca = equipamentoAtualizado.Marca;
+            }
+
+            if (equipamentoAtualizado.TipoEquipamento != null)
+            {
+                equipamentoBuscado.TipoEquipamento = equipamentoAtualizado.TipoEquipamento;
+            }
+
+            if (equipamentoAtualizado.NumSerie != null)
+            {
+                equipamentoBuscado.NumSerie = equipamentoAtualizado.NumSerie;
+            }
+
+            if (equipamentoAtualizado.Descricao != null)
+            {
+                equipamentoBuscado.Descricao = equipamentoAtualizado.Descricao;
+            }
+
+            if (equipamentoAtualizado.NumPatrimonio != null)
+            {
+                equipamentoBuscado.NumPatrimonio = equipamentoAtualizado.NumPatrimonio;
+            }
+
+            if (equipamentoAtualizado.Ativo != null)
+            {
+                equipamentoBuscado.Ativo = equipamentoAtualizado.Ativo;
+            }
+
+            ctx.Equipamentos.Update(equipamentoBuscado);
+
+            ctx.SaveChanges();
         }
 
         public Equipamento BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Equipamentos.Find(id);
         }
 
         public void Cadastrar(Equipamento novoEquipamento)
         {
-            throw new NotImplementedException();
+            ctx.Equipamentos.Add(novoEquipamento);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            ctx.Equipamentos.Remove(BuscarPorId(id));
+
+            ctx.SaveChanges();
         }
 
         public List<Equipamento> ListarTodos()
         {
-            throw new NotImplementedException();
+            return ctx.Equipamentos.ToList();
         }
     }
 }

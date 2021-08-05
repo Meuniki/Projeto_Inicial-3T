@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Porject_scool.Interfaces
 {
+    /// <summary>
+    /// Interface responsavel pelo repositorio equipamento
+    /// </summary>
     interface IEquipamentoRepository
     {
         /// <summary>
@@ -31,8 +34,8 @@ namespace Porject_scool.Interfaces
         /// Atualiza um objeto equipamento existente atravéz do seu ID
         /// </summary>
         /// <param name="id">ID do equipamento que será atualizado</param>
-        /// <param name="equipamentoAtializada">Objeto com as informações</param>
-        void Atualizar(int id, Equipamento equipamentoAtializada);
+        /// <param name="equipamentoAtualizado">Objeto com as informações</param>
+        void Atualizar(int id, Equipamento equipamentoAtualizado);
 
         /// <summary>
         /// Deleta um equipamento através do seu ID

@@ -27,7 +27,7 @@ namespace Porject_scool.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-RSQ1KON; Initial Catalog= Projeto_Inicial; Integrated Security=True");
             }
         }
@@ -39,7 +39,7 @@ namespace Porject_scool.Contexts
             modelBuilder.Entity<Entrada>(entity =>
             {
                 entity.HasKey(e => e.IdEntrada)
-                    .HasName("PK__Entradas__19943CE0B9203B82");
+                    .HasName("PK__Entradas__19943CE0CC704872");
 
                 entity.Property(e => e.IdEntrada).HasColumnName("idEntrada");
 
@@ -69,9 +69,9 @@ namespace Porject_scool.Contexts
             modelBuilder.Entity<Equipamento>(entity =>
             {
                 entity.HasKey(e => e.IdEquipamento)
-                    .HasName("PK__Equipame__75940D34FE2F0DBF");
+                    .HasName("PK__Equipame__75940D345894B037");
 
-                entity.HasIndex(e => e.NumPatrimonio, "UQ__Equipame__3A20CB692B9D4472")
+                entity.HasIndex(e => e.NumPatrimonio, "UQ__Equipame__3A20CB69A046B06C")
                     .IsUnique();
 
                 entity.Property(e => e.IdEquipamento).HasColumnName("idEquipamento");
@@ -108,14 +108,22 @@ namespace Porject_scool.Contexts
             modelBuilder.Entity<Sala>(entity =>
             {
                 entity.HasKey(e => e.IdSala)
-                    .HasName("PK__Salas__C4AEB19CF0F43F24");
+                    .HasName("PK__Salas__C4AEB19C149F26D6");
 
-                entity.HasIndex(e => e.Nome, "UQ__Salas__6F71C0DC9CAA2869")
+                entity.HasIndex(e => e.Nome, "UQ__Salas__6F71C0DC43E967C7")
                     .IsUnique();
 
                 entity.Property(e => e.IdSala).HasColumnName("idSala");
 
                 entity.Property(e => e.Andar).HasColumnName("andar");
+
+                entity.Property(e => e.Cep).HasColumnName("cep");
+
+                entity.Property(e => e.Instituicao)
+                    .IsRequired()
+                    .HasMaxLength(150)
+                    .IsUnicode(false)
+                    .HasColumnName("instituicao");
 
                 entity.Property(e => e.MetragemSala).HasColumnName("metragemSala");
 
@@ -124,14 +132,16 @@ namespace Porject_scool.Contexts
                     .HasMaxLength(150)
                     .IsUnicode(false)
                     .HasColumnName("nome");
+
+                entity.Property(e => e.Telefone).HasColumnName("telefone");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__Usuarios__645723A6495ED9EC");
+                    .HasName("PK__Usuarios__645723A6879F7CC6");
 
-                entity.HasIndex(e => e.Email, "UQ__Usuarios__AB6E616417293E88")
+                entity.HasIndex(e => e.Email, "UQ__Usuarios__AB6E6164B5D22E93")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
