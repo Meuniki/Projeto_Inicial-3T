@@ -21,12 +21,12 @@ Trello
 
 # Como executar a aplicação
 Você deve ter:
-	- SQL Server
-	- SQL Server Management Studio
-	- Visual Studio 2019
-	- .NET
-	- Visual Studio Code
-	- Node.js
+- SQL Server
+- SQL Server Management Studio
+- Visual Studio 2019
+- .NET
+- Visual Studio Code
+- Node.js
 	
 
 
