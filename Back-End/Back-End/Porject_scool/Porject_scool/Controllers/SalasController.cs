@@ -33,7 +33,7 @@ namespace Porject_scool.Controllers
         /// Lista todas as salas
         /// </summary>
         /// <returns>Uma lista de salas e um status code 200 - Ok</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -52,7 +52,7 @@ namespace Porject_scool.Controllers
         /// </summary>
         /// <param name="id">ID da sala a ser buscada</param>
         /// <returns>Uma sala encontrada e um status code 200 - Ok</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         { 
@@ -71,7 +71,7 @@ namespace Porject_scool.Controllers
         /// </summary>
         /// <param name="novaSala">Objeto novaSala que será cadastrada</param>
         /// <returns>Um status code 201 - Created</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public IActionResult Post(Sala novaSala)
         {
@@ -93,7 +93,7 @@ namespace Porject_scool.Controllers
         /// <param name="id">ID da sala que será alterada</param>
         /// <param name="salaAtualizada">Objeto salaAtualizada com as novas informações</param>
         /// <returns>Um status code 204 - No Content</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPut]
         public IActionResult Put(int id, Sala salaAtualizada)
         {
@@ -114,6 +114,7 @@ namespace Porject_scool.Controllers
         /// </summary>
         /// <param name="id">ID da sala a ser deletada</param>
         /// <returns>Um status code 204 - No Content</returns>
+        //[Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

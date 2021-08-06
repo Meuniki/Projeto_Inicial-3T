@@ -33,7 +33,7 @@ namespace Porject_scool.Controllers
         /// Lista todos os equipamentos
         /// </summary>
         /// <returns>Uma lista de equipamentos e um status code 200 - Ok</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -52,7 +52,7 @@ namespace Porject_scool.Controllers
         /// </summary>
         /// <param name="id">ID do equipamento a ser buscado</param>
         /// <returns>Um equipamento encontrado e um status code 200 - Ok</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -71,7 +71,7 @@ namespace Porject_scool.Controllers
         /// </summary>
         /// <param name="novaEquipamento">Objeto novaEquipamento que será cadastrada</param>
         /// <returns>Um status 201 - Created</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public IActionResult Post(Equipamento novaEquipamento)
         {
@@ -86,7 +86,7 @@ namespace Porject_scool.Controllers
         /// <param name="id">ID do equipamento que será alterado</param>
         /// <param name="equipamentoAtualizada">Objeto equipamentoAtualizada com as novas informações</param>
         /// <returns>Um status code 204 - No Content</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPut]
         public IActionResult Put(int id, Equipamento equipamentoAtualizada)
         {
@@ -99,7 +99,8 @@ namespace Porject_scool.Controllers
         /// Deleta um equipamento existente
         /// </summary>
         /// <param name="id">ID do equipamento que será deletado</param>
-        /// <returns>Um status code 204 - No Content</returns>
+        /// <returns>Um status code 204 - No Content</returns> 
+        //[Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
