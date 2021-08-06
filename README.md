@@ -1,54 +1,32 @@
-# Projeto_Inicial-3T
-Projeto da primeira semana 3º de Desenvolvimento de Sistemas
+## Projeto_Inicial-3T
+O Projeto Inicial que é um projeto em que se deve criar um sistema para gerenciar o patrimônio de uma escola.
 
-Criar um Sistema para gerenciar o patrimônio de uma escola.(backend, web e/ou mobile)
+# Construção
+- scripts (Modelo Conseitual, Lógico e Físico) (Draw.io)
+- Banco de Dados(SQL Server)
+- API(Visual Studio 2019)
+- PostMan
+- Wire Frame de Baixa Fidelidade(Figma)
+- Wire Frame de Alta Fidelidade(Figma)
+- Front-End(Visual Studio Code e ReactJS)
 
-Fazer um fork no repositório do github:
+# Organização
+Trello 
+  - https://trello.com/b/v8SY9Ogr/projeto-conclus%C3%A3o-de-curso
 
-https://github.com/senai-desenvolvimento/projeto-individual-3t
+# Tecnologias
+- Entity Framework Core
+- Consumo de API
+- JWT
 
-## Cadastro de Sala
-  
-  Criar um cadastro da empresa com os seguintes campos:
-  - Andar;
-  - Nome;
-  - Metragem da sala
-  - Todos os campos são de preenchimento obrigatório.
+# Como executar a aplicação
+Você deve ter:
+- SQL Server
+- SQL Server Management Studio
+- Visual Studio 2019
+- .NET
+- Visual Studio Code
+- Node.js
+	
 
-## Cadastro de Equipamento
-  
-  Criar um cadastro de equipamentos com os seguintes campos:
-  - Marca;
-  - Tipo equipamento(mobiliário, informática, eletroeletrônico, ...);
-  - Numero de Serie
-  - Descricao;
-  - Número do patrimônio.
-  - Ativo/Inativo
-  - Todos os campos são de preenchimento obrigatório.
-  
-## Funcionalidades
-  
-  - Sala: CRUD;
-  - Equipamento: CRUD;
-  - Controle de entrada e saída de equipamento(interno, externo).
-   
-## Requisitos
-
-  - Modelagem de dados;
-  - É necessário o usuário estar autenticado no sistema
-  - Implementar Swagger
-  - O retorno deverá ser em formato JSON;
-  - Requisições GET, POST, PUT ou DELETE, conforme a melhor prática;
-  - A persistência dos dados pode ser realizada da maneira que preferir;
-  - Criar um  README do projeto descrevendo as tecnologias utilizadas, chamadas dos serviços e configurações necessário para executar a aplicação.
-
-## Ganha mais pontos
-
-  - Desenvolver utilizando TDD;
-  - Criar página de relatório de entrada e saída;
-  - Dashboard com informações de quantidade de salas, quantidade de equipamentos e gráfico de entrada e saída diário
-
-## Submissão
-  
-  Crie um fork do teste para acompanharmos o seu desenvolvimento através dos seus commits.
 
