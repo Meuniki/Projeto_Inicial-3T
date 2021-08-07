@@ -5,7 +5,7 @@ O Projeto Inicial que é um projeto em que se deve criar um sistema para gerenci
 - scripts (Modelo Conseitual, Lógico e Físico) (Draw.io)
 - Banco de Dados(SQL Server)
 - API(Visual Studio 2019)
-- PostMan
+- Postman
 - Wire Frame de Baixa Fidelidade(Figma)
 - Wire Frame de Alta Fidelidade(Figma)
 - Front-End(Visual Studio Code e ReactJS)
