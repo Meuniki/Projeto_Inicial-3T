@@ -5,6 +5,7 @@ import linha from "../assets/Imagens/Vector 45.png"
 import linha2 from "../assets/Imagens/Line 1.png"
 import React, { useState } from 'react';
 import axios from 'axios';
+import {parseJwt} from '../services/auth'
 
 export default function CadastroEquipamentos() {
 
@@ -12,7 +13,7 @@ export default function CadastroEquipamentos() {
     const [ tipoEquipamento, setTipoEquipamento ] = useState( '' );
     const [ numSerie, setNumSerie ] = useState( '' );
     const [ ativo , setAtivo ] = useState( false );
-    const [ numPatrimonio , setNumPatrimonio ] = useState( 0 );
+    const [ numPatrimonio , setNumPatrimonio ] = useState( '' );
     const [ descricao, setDescricao ] = useState( '' );
     const [ isLoading, setIsLoading ] = useState( false );
 
@@ -28,7 +29,10 @@ export default function CadastroEquipamentos() {
             descricao : descricao,
             numPatrimonio : numPatrimonio,
             ativo : ativo
-        })
+        },
+        {headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
+        }})
         .then(resposta => {
             if (resposta.status === 201) {
                 console.log('Equipamento Cadastrado!');
@@ -38,7 +42,7 @@ export default function CadastroEquipamentos() {
 
         .catch(erro => console.log(erro));
     };
-
+    
     return(
         <div className="pagina">
             <section>
@@ -46,7 +50,7 @@ export default function CadastroEquipamentos() {
                     <div className="usuario">
                         <img src={linha2} alt="Linha"/>
                         <img className="imgUsuario" src={imgUsuario} alt="Foto Do Usuário"/>
-                        <p className="nomeUsuario">Pedro - Adm</p>
+                        <p className="nomeUsuario">{parseJwt().name}</p>
                     </div>
                 </div>
                 <div className="parteInferior">
@@ -73,7 +77,7 @@ export default function CadastroEquipamentos() {
                             </div>
                             <div className="bloco">
                                 <p className="textoCadastro">Número de patrimônio:</p>
-                                <input className="inputCadastro" type="int" value={numPatrimonio} onChange={(event) => setNumPatrimonio(event.target.value)}></input>
+                                <input className="inputCadastro" type="text" value={numPatrimonio} onChange={(event) => setNumPatrimonio(event.target.value)}></input>
                             </div>
                             <div className="bloco">
                                 <p className="textoCadastro">Descrição:</p>
