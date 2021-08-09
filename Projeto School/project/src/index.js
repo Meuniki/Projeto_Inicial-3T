@@ -2,14 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Login from './pages/Login';
+import cadastrosala from './pages/CadastroSala';
 import reportWebVitals from './reportWebVitals';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Login />
-  </React.StrictMode>,
-  document.getElementById('root')
+const routing = (
+  <Router>
+    <div>
+        <Switch>
+          <Route path="/login" component={Login}/>
+          <Route path="/cadastrosala" component={cadastrosala}/>
+        </Switch>
+    </div>
+  </Router>
 );
+
+ReactDOM.render( routing, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
