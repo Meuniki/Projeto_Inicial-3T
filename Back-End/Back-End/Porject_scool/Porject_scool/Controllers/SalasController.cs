@@ -94,7 +94,7 @@ namespace Porject_scool.Controllers
         /// <param name="salaAtualizada">Objeto salaAtualizada com as novas informações</param>
         /// <returns>Um status code 204 - No Content</returns>
         //[Authorize]
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Put(int id, Sala salaAtualizada)
         {
             try

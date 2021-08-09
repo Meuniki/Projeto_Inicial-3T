@@ -20,7 +20,7 @@ CREATE TABLE Equipamentos
 	,tipoEquipamento	VARCHAR(150) NOT NULL
 	,numSerie			CHAR(10) NOT NULL
 	,descricao			TEXT NOT NULL
-	,numPatrimonio		INT UNIQUE NOT NULL
+	,numPatrimonio		CHAR(10) UNIQUE NOT NULL
 	,ativo				BIT NOT NULL
 );
 GO
@@ -29,11 +29,11 @@ CREATE TABLE Salas
 (
 	idSala				INT PRIMARY KEY IDENTITY
 	,instituicao		VARCHAR(150) NOT NULL
-	,andar				INT NOT NULL
+	,andar				CHAR(2) NOT NULL
 	,nome				VARCHAR(150) UNIQUE NOT NULL
 	,metragemSala		FLOAT NOT NULL
-	,cep				INT NOT NULL
-	,telefone			INT NOT NULL
+	,cep				CHAR(13) NOT NULL
+	,telefone			CHAR(11) NOT NULL
 );
 GO
 

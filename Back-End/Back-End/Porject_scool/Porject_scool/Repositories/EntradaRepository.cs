@@ -20,7 +20,33 @@ namespace Porject_scool.Repositories
         public void Atualizar(int id, Entrada entradaAtualizada)
         {
             Entrada entradaBuscada = BuscarPorId(id);
+
+            if (entradaAtualizada.IdSala != null)
+            {
+                entradaBuscada.IdSala = entradaAtualizada.IdSala;
+            }
+
+            if (entradaAtualizada.IdEquipamento != null)
+            {
+                entradaBuscada.IdEntrada = entradaAtualizada.IdEntrada;
+            }
+
+            if (entradaAtualizada.DataEntrada >= DateTime.Now)
+            {
+                entradaBuscada.DataEntrada = entradaAtualizada.DataEntrada;
+            }
+
+            if (entradaAtualizada.DataSaida >= entradaAtualizada.DataEntrada)
+            {
+                entradaBuscada.DataSaida = entradaAtualizada.DataSaida;
+            }
+
+            ctx.Entradas.Update(entradaBuscada);
+
+            ctx.SaveChanges();
+
         }
+        
 
         /// <summary>
         /// Busca uma entrada pelo seu ID

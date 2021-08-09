@@ -88,7 +88,7 @@ namespace Porject_scool.Controllers
         /// <param name="entradaAtualizada">Objeto entradaAtualizada com as novas informações</param>
         /// <returns>Um status code 204 - No Content</returns>
         //[Authorize]
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Put(int id, Entrada entradaAtualizada)
         {
             _entradaRepository.Atualizar(id, entradaAtualizada);

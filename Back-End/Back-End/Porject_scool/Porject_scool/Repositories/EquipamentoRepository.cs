@@ -41,7 +41,7 @@ namespace Porject_scool.Repositories
                 equipamentoBuscado.NumPatrimonio = equipamentoAtualizado.NumPatrimonio;
             }
 
-            if (equipamentoAtualizado.Ativo != null)
+            if (equipamentoAtualizado.Ativo == true || equipamentoAtualizado.Ativo == false)
             {
                 equipamentoBuscado.Ativo = equipamentoAtualizado.Ativo;
             }

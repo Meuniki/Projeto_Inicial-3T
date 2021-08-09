@@ -36,7 +36,7 @@ namespace Porject_scool.Repositories
                 salaBuscada.Nome = salaAtualizada.Nome;
             }
 
-            if (salaAtualizada.MetragemSala != null)
+            if (salaAtualizada.MetragemSala > 0)
             {
                 salaBuscada.MetragemSala = salaAtualizada.MetragemSala;
             }
@@ -50,6 +50,10 @@ namespace Porject_scool.Repositories
             {
                 salaBuscada.Telefone = salaAtualizada.Telefone;
             }
+
+            ctx.Salas.Update(salaBuscada);
+
+            ctx.SaveChanges();
         }
 
         /// <summary>

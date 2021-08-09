@@ -87,7 +87,7 @@ namespace Porject_scool.Controllers
         /// <param name="equipamentoAtualizada">Objeto equipamentoAtualizada com as novas informações</param>
         /// <returns>Um status code 204 - No Content</returns>
         //[Authorize]
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Put(int id, Equipamento equipamentoAtualizada)
         {
             _equipamentoRepository.Atualizar(id, equipamentoAtualizada);

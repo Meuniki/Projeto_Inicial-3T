@@ -17,7 +17,7 @@ namespace Porject_scool.Domains
         public string TipoEquipamento { get; set; }
         public string NumSerie { get; set; }
         public string Descricao { get; set; }
-        public int NumPatrimonio { get; set; }
+        public string NumPatrimonio { get; set; }
         public bool Ativo { get; set; }
 
         public virtual ICollection<Entrada> Entrada { get; set; }
