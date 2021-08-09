@@ -105,7 +105,7 @@ export default function Login() {
                             value={senha}
                             onChange={atualizaStateCampoSenha}
                         />
-                        <p>{erroMensagem}</p>
+                        <p className="erro">{erroMensagem}</p>
                         <div className="Login__conjunto">
                             <input type="checkbox" id="scales" name="scales"
                             checked className="Login__checkbox"></input>
